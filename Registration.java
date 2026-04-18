@@ -4,17 +4,7 @@
 
 package com.mycompany.registration;
 
-/**
- *
- * @author Student
- */
-/**
- . RegistrationSystem class - Main entry point of the application.
- . Handles user input for registration and login using the Login class.
- . 
- . Reference: Oracle Java Documentation - Scanner class
- . https://docs.oracle.com/javase/8/docs/api/java/util/Scanner.html
- */
+
 import java.util.Scanner;
 
 public class Registration {
@@ -24,13 +14,13 @@ public class Registration {
             System.out.println("=== REGISTRATION ===");
 
             System.out.print("Enter username: ");
-            String username = scanner.nextLine();   // FIX: store input
+            String username = scanner.nextLine();   //  stores input
 
             System.out.print("Enter password: ");
-            String password = scanner.nextLine();   // FIX: store input
+            String password = scanner.nextLine();   //  stores input
 
             System.out.print("Enter SA phone number (e.g. +27831234567): ");
-            String phoneNumber = scanner.nextLine(); // FIX: store input
+            String phoneNumber = scanner.nextLine(); //  stores input
 
             // FIX: properly create Login object
             Login login = new Login(username, password, phoneNumber);
