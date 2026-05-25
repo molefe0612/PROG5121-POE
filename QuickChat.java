@@ -104,7 +104,7 @@ public class QuickChat {
                             System.out.println("Action: Object deleted from staging memory execution flow tracks.");
                         } 
                         else if (subChoice == 3) {
-                            // JSON Research Component Framework
+                            // JSON  Component 
                             String filename = "message_store_" + tempMsg.getUniqueId() + ".json";
                             try (FileWriter file = new FileWriter(filename)) {
                                 file.write(tempMsg.storeMessage());
