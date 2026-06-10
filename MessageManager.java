@@ -4,7 +4,6 @@
  */
 package com.mycompany.message.java;
 
-// These three imports are required to make Lists and Arrays work
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -23,7 +22,7 @@ public class MessageManager {
     private final List<String> flags = new ArrayList<>(Arrays.asList("Sent", "Stored", "Disregard", "Sent", "Stored"));
     private final List<String> hashes = new ArrayList<>(Arrays.asList("HASH111", "HASH222", "HASH333", "HASH444", "HASH555"));
 
-    // Feature A: Return only Sent messages (Up to item 4 per test spec)
+    //Return only Sent messages (Up to item 4 per test spec)
     public String getSentMessages() {
         List<String> sentList = new ArrayList<>();
         for (int i = 0; i < 4; i++) {
@@ -34,7 +33,7 @@ public class MessageManager {
         return String.join(", ", sentList);
     }
 
-    // Feature B: Find the longest message (Up to item 4 per test spec)
+    //Find the longest message (Up to item 4 per test spec)
     public String findLongestMessage() {
         String longest = "";
         for (int i = 0; i < 4; i++) {
@@ -45,7 +44,7 @@ public class MessageManager {
         return longest;
     }
 
-    // Feature C: Search by Message ID
+    //Search by Message ID
     public String searchById(String searchId) {
         int index = messageIds.indexOf(searchId);
         if (index != -1) {
@@ -54,7 +53,7 @@ public class MessageManager {
         return "Message ID not found.";
     }
 
-    // Feature D: Search Sent/Stored by Recipient
+    // Search Sent/Stored by Recipient
     public String searchByRecipient(String targetRecipient) {
         List<String> matchedMessages = new ArrayList<>();
         for (int i = 0; i < recipients.size(); i++) {
@@ -66,7 +65,7 @@ public class MessageManager {
         return matchedMessages.isEmpty() ? "No records found." : String.join(" | ", matchedMessages);
     }
 
-    // Feature E: Delete by Hash
+    // Delete by Hash
     public String deleteByHash(String targetHash) {
         int index = hashes.indexOf(targetHash);
         if (index != -1) {
@@ -94,3 +93,4 @@ public class MessageManager {
         return report.toString();
     }
 }
+
