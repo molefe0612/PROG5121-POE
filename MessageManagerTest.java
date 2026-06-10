@@ -15,7 +15,8 @@ public class MessageManagerTest {
     }
 
     @Test
-    public void testSentMessagesPopulated() {
+    public void testSentMessagesPopulated() 
+    {
         String result = manager.getSentMessages();
         assertEquals("Did you get the cake?, It is dinner time !", result);
     }
