@@ -16,6 +16,9 @@ public class MessageManager {
         loadDynamicData();
     }
 
+    p   loadDynamicData();
+    }
+
     private void loadDynamicData() 
     {
                String[] ids = {"MSG001", "MSG002", "MSG003", "0838884567", "MSG005"};
