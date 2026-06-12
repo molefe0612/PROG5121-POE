@@ -23,7 +23,7 @@ public class MyApp
             System.out.print("Select an option: ");
 
             int choice = scanner.nextInt();
-            scanner.nextLine(); // Clear the text buffer
+            scanner.nextLine(); 
 
             switch (choice) 
             {
