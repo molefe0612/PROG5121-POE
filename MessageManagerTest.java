@@ -18,7 +18,7 @@ public class MessageManagerTest {
     public void testSentMessagesPopulated() 
     {
         String result = manager.getSentMessages();
-        assertEquals("Did you get the cake?, It is dinner time !", result);
+        assertEquals("Did you get the cake?, It is dinner time!", result);
     }
 
     @Test
@@ -36,13 +36,13 @@ public class MessageManagerTest {
     @Test
     public void testSearchSentOrStoredByRecipient() {
         String result = manager.searchByRecipient("+27838884567");
-        assertEquals("Where are you? You are late! I have asked you to be on time. | Ok, I am leaving without you.", result);
+        assertEquals("Where are you? You are late! I have asked you to be on time.  Ok, I am leaving without you.", result);
     }
 
     @Test
     public void testDeleteMessageUsingHash() {
         String deletionConfirmation = manager.deleteByHash("HASH222");
-        assertEquals("Message: \"Where are you? You are late! I have asked you to be on time.\" successfully deleted.", deletionConfirmation);
+        assertEquals("Message: "Where are you? You are late! I have asked you to be on time.\" successfully deleted.", deletionConfirmation);
         
         String tryAgain = manager.deleteByHash("HASH222");
         assertEquals("Hash not found.", tryAgain);
